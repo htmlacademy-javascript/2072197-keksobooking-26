@@ -1,6 +1,6 @@
 function getRandomInteger(min, max) {
   if (max < min) {
-    let changer = max;
+    const changer = max;
     max = min;
     min = changer;
   }
@@ -11,10 +11,11 @@ function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max + 1));
   }
 }
+getRandomInteger();
 
 function getRandomDigits(min, max, digits) {
   if (max < min) {
-    let changer = max;
+    const changer = max;
     max = min;
     min = changer;
   }
@@ -25,3 +26,4 @@ function getRandomDigits(min, max, digits) {
     return Number((Math.random() * max).toFixed(digits));
   }
 }
+getRandomDigits();
