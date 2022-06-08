@@ -22,6 +22,6 @@ function getRandomDigits(min, max, digits) {
     return min;
   }
   if ((min, max >= 0)) {
-    return (Math.random() * max).toFixed(digits);
+    return Number((Math.random() * max).toFixed(digits));
   }
 }
