@@ -11,7 +11,7 @@ function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max + 1));
   }
 }
-getRandomInteger();
+getRandomInteger(0, 100);
 
 function getRandomDigits(min, max, digits) {
   if (max < min) {
@@ -26,4 +26,4 @@ function getRandomDigits(min, max, digits) {
     return Number((Math.random() * max).toFixed(digits));
   }
 }
-getRandomDigits();
+getRandomDigits(0, 100, 2);
