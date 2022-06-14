@@ -72,7 +72,7 @@ function getRandomArrayElement(elements) {
 //функция для перемешивания массива
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
@@ -89,7 +89,7 @@ function getNewArray(array) {
 //функция для получения массива случайной длины с возможностью повторения элементов
 function getNewRandomArray(arr) {
   const newRandomArray = [];
-  for (i = 0; i <= getRandomPositiveInteger(0, 10); i++) {
+  for (let i = 0; i <= getRandomPositiveInteger(0, 10); i++) {
     newRandomArray.push(arr[getRandomPositiveInteger(0, arr.length - 1)]);
   }
   return newRandomArray;
@@ -98,7 +98,7 @@ function getNewRandomArray(arr) {
 //функция для получения неповторяющихся значений
 let number = 0;
 function getAvatarNumber() {
-  for (i = 1; i <= SIMILAR_AD_COUNT; i++) {
+  for (let i = 1; i <= SIMILAR_AD_COUNT; i++) {
     number += 1;
     if (number < 10) {
       return `img/avatars/user0${number}.png`;
@@ -135,4 +135,5 @@ const createRentalAd = function () {
   };
 };
 
+// eslint-disable-next-line no-unused-vars
 const rentalAds = Array.from({ length: 10 }, createRentalAd);
