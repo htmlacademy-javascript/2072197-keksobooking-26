@@ -19,48 +19,48 @@ function getRandomPositiveFloat(a, b, digits = 1) {
 }
 
 const TITLES = [
-  "Большие уютные аппартаменты",
-  "Квартира-студия",
-  "Номер с видом на реку",
-  "Номер с видом на город",
-  "Номер с французским балконом",
-  "Пентхаус в элитном районе",
-  "Аппартаменты в историческом центре города",
-  "Номер с джакузи",
-  "Тихий номер в спальном районе города",
-  "Номер с видом на море",
+  'Большие уютные аппартаменты',
+  'Квартира-студия',
+  'Номер с видом на реку',
+  'Номер с видом на город',
+  'Номер с французским балконом',
+  'Пентхаус в элитном районе',
+  'Аппартаменты в историческом центре города',
+  'Номер с джакузи',
+  'Тихий номер в спальном районе города',
+  'Номер с видом на море',
 ];
 
-const TYPES = ["palace", "flat", "house", "bungalow", "hotel"];
+const TYPES = ['palace', 'flat', 'house', 'bungalow', 'hotel'];
 
-const CHECKINS = ["12:00", "13:00", "14:00"];
+const CHECKINS = ['12:00', '13:00', '14:00'];
 
-const CHECKOUTS = ["12:00", "13:00", "14:00"];
+const CHECKOUTS = ['12:00', '13:00', '14:00'];
 
 const FEATURES = [
-  "wifi",
-  "dishwasher",
-  "parking",
-  "washer",
-  "elevator",
-  "conditioner",
+  'wifi',
+  'dishwasher',
+  'parking',
+  'washer',
+  'elevator',
+  'conditioner',
 ];
 
 const DESCRIPTION = [
-  "Потрясающее место",
-  "Лучшее место в городе",
-  "Лучшее место для отдыха большой семьи",
-  "Лучшее место для пары",
-  "Идеальное место для ценителей комфорта",
-  "Тихое место для отдыха",
-  "Место с лучшим интерьером",
-  "Лучшее место для тех, кто находится в деловой поездке",
+  'Потрясающее место',
+  'Лучшее место в городе',
+  'Лучшее место для отдыха большой семьи',
+  'Лучшее место для пары',
+  'Идеальное место для ценителей комфорта',
+  'Тихое место для отдыха',
+  'Место с лучшим интерьером',
+  'Лучшее место для тех, кто находится в деловой поездке',
 ];
 
 const PHOTOS = [
-  "https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg",
-  "https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg",
-  "https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg",
+  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/duonguyen-8LrGtIxxa4w.jpg',
+  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/brandon-hoogenboom-SNxQGWxZQi0.jpg',
+  'https://assets.htmlacademy.ru/content/intensive/javascript-1/keksobooking/claire-rendall-b6kAwr1i0Iw.jpg',
 ];
 
 const SIMILAR_AD_COUNT = 10;
