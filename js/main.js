@@ -1,2 +1,1 @@
-import {getRentalAds} from './data.js';
-getRentalAds();
+import './similar_elements.js';

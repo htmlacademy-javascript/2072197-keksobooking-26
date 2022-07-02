@@ -75,7 +75,7 @@ const createRentalAd = function () {
     },
     offer: {
       title: getRandomArrayElement(TITLES),
-      addres: `${randomLat}, ${randomLng}`,
+      address: `${randomLat}, ${randomLng}`,
       price: getRandomPositiveInteger(5000, 20000),
       type: getRandomArrayElement(TYPES),
       rooms: getRandomPositiveInteger(1, 3),
@@ -94,5 +94,6 @@ const createRentalAd = function () {
 };
 
 const getRentalAds = () => Array.from({ length: SIMILAR_AD_COUNT }, createRentalAd);
+
 
 export {getRentalAds};
