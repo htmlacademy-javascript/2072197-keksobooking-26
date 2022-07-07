@@ -1,1 +1,2 @@
-import './similar_elements.js';
+// import './similar_elements.js';
+import './map.js';
