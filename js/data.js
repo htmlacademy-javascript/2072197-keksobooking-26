@@ -95,5 +95,4 @@ const createRentalAd = function () {
 
 const getRentalAds = () => Array.from({ length: SIMILAR_AD_COUNT }, createRentalAd);
 
-
 export {getRentalAds};

@@ -4,8 +4,8 @@ const pristine = new Pristine(form, {
   errorClass: 'form__item--invalid',
   successClass: 'form__item--valid',
   errorTextParent: 'ad-form__element',
-  errorTextTag: 'span',
-});
+  errorTextTag: 'div',
+}, false);
 
 function validateTitle (value) {
   return value.length >= 30 && value.length <= 100;
@@ -37,7 +37,7 @@ function getCapacityErrorMessage () {
 }
 
 pristine.addValidator(rooms, validateRoomsAndGuests, getCapacityErrorMessage);
-pristine.addValidator(guests, validateRoomsAndGuests, getCapacityErrorMessage);
+// pristine.addValidator(guests, validateRoomsAndGuests, getCapacityErrorMessage);
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();

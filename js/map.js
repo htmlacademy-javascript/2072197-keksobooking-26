@@ -1,6 +1,6 @@
-// import {turnActiveMode} from './js/modes.js';
-
-// import { turnActiveMode } from './modes';
+import {getRentalAds} from './data.js';
+// import {turnActiveMode} from './modes.js';
+import {renderCard} from './similar_elements.js';
 
 const CENTER_TOKYO = {
   lat: 35.691566,
@@ -21,8 +21,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 
 const mainPinIcon = L.icon({
   iconUrl: './img/main-pin.svg',
-  iconSize: [42, 42],
-  iconAnchor: [21, 42],
+  iconSize: [48, 48],
+  iconAnchor: [24, 48],
+});
+
+const pinAd = L.icon({
+  iconUrl: './img/pin.svg',
+  iconSize: [36, 36],
+  iconAnchor: [18, 36],
 });
 
 
@@ -30,6 +36,18 @@ const mainMarker = L.marker(CENTER_TOKYO, {draggable: true, icon: mainPinIcon});
 
 mainMarker.addTo(map);
 
+const address = document.querySelector('#address');
+
 mainMarker.on('moveend', (evt) => {
-  console.log(evt.target.getLatLng());
+  const addressObject = evt.target.getLatLng();
+  address.value = `lat: ${addressObject.lat.toFixed(5)}, lng: ${addressObject.lng.toFixed(5)}`;
+});
+
+const ads = getRentalAds();
+
+ads.forEach((ad) => {
+  const marker = L.marker(ad.location, {pinAd});
+  marker
+    .addTo(map)
+    .bindPopup(renderCard(ad));
 });

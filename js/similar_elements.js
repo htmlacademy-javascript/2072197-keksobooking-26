@@ -1,5 +1,3 @@
-import {getRentalAds} from './data.js';
-
 const TYPES_OF_HOUSING = {
   flat: 'Квартира',
   bungalow: 'Бунгало',
@@ -9,12 +7,9 @@ const TYPES_OF_HOUSING = {
 };
 
 
-const map = document.querySelector('#map-canvas');
 const similarAdTemplate = document.querySelector('#card').content.querySelector('.popup');
 
-const similarAds = getRentalAds();
-
-similarAds.forEach((ad) => {
+function renderCard (ad) {
   const adElement = similarAdTemplate.cloneNode(true);
   adElement.querySelector('.popup__avatar').src = ad.author.avatar;
   adElement.querySelector('.popup__title').textContent = ad.offer.title;
@@ -50,6 +45,8 @@ similarAds.forEach((ad) => {
     photoTemplate.appendChild(element);
   }
 
-  map.appendChild(adElement);
-});
+  return adElement;
+}
+
+export {renderCard};
 

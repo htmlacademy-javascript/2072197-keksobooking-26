@@ -23,7 +23,7 @@ function turnInactiveMode () {
 
 }
 
-turnInactiveMode();
+// turnInactiveMode();
 
 //активное состояние страницы
 function turnActiveMode () {
@@ -42,7 +42,5 @@ function turnActiveMode () {
 
   mapFormFieldset.disabled = 'false';
 }
-
-turnActiveMode();
 
 export {turnInactiveMode, turnActiveMode};
