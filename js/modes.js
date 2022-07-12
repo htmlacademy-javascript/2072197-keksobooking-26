@@ -23,7 +23,7 @@ function turnInactiveMode () {
 
 }
 
-// turnInactiveMode();
+turnInactiveMode();
 
 //активное состояние страницы
 function turnActiveMode () {
