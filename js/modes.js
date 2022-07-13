@@ -31,16 +31,16 @@ function turnActiveMode () {
   adForm.classList.remove('ad-form--disabled');
 
   adFormFieldset.forEach((element) => {
-    element.disabled = 'false';
+    element.removeAttribute('disabled');
   });
 
   mapForm.classList.remove('map__filters--disabled');
 
   mapFormSelects.forEach((element) => {
-    element.disabled = 'false';
+    element.removeAttribute('disabled');
   });
 
-  mapFormFieldset.disabled = 'false';
+  mapFormFieldset.removeAttribute('disabled');
 }
 
-export {turnInactiveMode, turnActiveMode};
+export {turnActiveMode};

@@ -1,5 +1,5 @@
 import {getRentalAds} from './data.js';
-// import {turnActiveMode} from './modes.js';
+import {turnActiveMode} from './modes.js';
 import {renderCard} from './similar_elements.js';
 
 const CENTER_TOKYO = {
@@ -10,7 +10,7 @@ const CENTER_TOKYO = {
 const ZOOM_MAP = 12;
 
 const map = L.map('map-canvas').on('load', () => {
-  // turnActiveMode();
+  turnActiveMode();
 }).setView(CENTER_TOKYO, ZOOM_MAP);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
