@@ -13,11 +13,13 @@ function validateTitle (value) {
 
 pristine.addValidator(form.querySelector('#title'), validateTitle, 'От 30 до 100 символов');
 
+const price = form.querySelector('#price');
+
 function validatePrice (value) {
   return value <= 100000;
 }
 
-pristine.addValidator(form.querySelector('#price'), validatePrice, 'До 100000 рублей');
+pristine.addValidator(price, validatePrice, 'До 100000 рублей');
 
 const rooms = form.querySelector('#room_number');
 const guests = form.querySelector('#capacity');
@@ -37,7 +39,23 @@ function getCapacityErrorMessage () {
 }
 
 pristine.addValidator(rooms, validateRoomsAndGuests, getCapacityErrorMessage);
+<<<<<<< HEAD
 // pristine.addValidator(guests, validateRoomsAndGuests, getCapacityErrorMessage);
+=======
+
+const minPrices = {
+  'bungalow': 0,
+  'flat': 1000,
+  'hotel': 3000,
+  'house': 5000,
+  'palace': 10000,
+};
+
+const type = form.querySelector('#type');
+type.addEventListener('change', () => {
+  price.placeholder = minPrices[type.value];
+});
+>>>>>>> module8-task2
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
