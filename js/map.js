@@ -51,3 +51,34 @@ ads.forEach((ad) => {
     .addTo(map)
     .bindPopup(renderCard(ad));
 });
+
+const sliderElement = document.querySelector('.ad-form__slider');
+const valueElement = document.querySelector('#price');
+
+noUiSlider.create(sliderElement, {
+  range: {
+    min: 0,
+    max: 100000,
+  },
+  start: 0,
+  step: 1000,
+  connect: 'lower',
+  format: {
+    to: function (value) {
+      if (Number.isInteger(value)) {
+        return value.toFixed(0);
+      }
+    },
+    from: function (value) {
+      return parseFloat(value);
+    }
+  }
+});
+
+sliderElement.noUiSlider.on('update', () => {
+  valueElement.value = sliderElement.noUiSlider.get();
+});
+
+valueElement.addEventListener('change', () => {
+  sliderElement.noUiSlider.set(valueElement.value);
+});
