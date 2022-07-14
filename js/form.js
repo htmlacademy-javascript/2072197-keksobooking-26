@@ -39,9 +39,6 @@ function getCapacityErrorMessage () {
 }
 
 pristine.addValidator(rooms, validateRoomsAndGuests, getCapacityErrorMessage);
-<<<<<<< HEAD
-// pristine.addValidator(guests, validateRoomsAndGuests, getCapacityErrorMessage);
-=======
 
 const minPrices = {
   'bungalow': 0,
@@ -55,7 +52,6 @@ const type = form.querySelector('#type');
 type.addEventListener('change', () => {
   price.placeholder = minPrices[type.value];
 });
->>>>>>> module8-task2
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
